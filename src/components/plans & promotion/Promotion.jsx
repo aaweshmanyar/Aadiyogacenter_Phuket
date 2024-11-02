@@ -1,80 +1,219 @@
 import React from "react";
 import img from "../../assets/img/Pilates/pilates2.jpg";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import './promotion.css';
+import image from '../../assets/img/courses/yogaclass.jpg';
 
 const Promotions = () => {
-  const courses = [
-    {
-      title: "14 + 1 Trial",
-      price: "4725 THB",
-      description: "315 THB / Class",
-      validity: "2 months",
-      drop: "Drop-in 599 THB",
-      start: "Starts on purchase date",
-    },
-  ];
+  
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      {/* Main Heading for the Promotions Section */}
-      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">
-        Our Special Promotions
-      </h2>
+    
 
-      {/* Promotions Cards */}
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-12 gap-y-12">
-        {courses.map((item, index) => {
-          const { title, description, price, drop, validity, start } = item;
-          return (
-            <div
-              key={index}
-              className="max-w-sm w-full bg-green-100 text-black rounded-lg shadow-lg p-6 flex flex-col transition hover:shadow-xl hover:cursor-pointer"
-            >
-              {/* Card Heading */}
-              <h3 className="text-lg lg:text-xl font-bold text-heading text-center mb-4">
-                Promotion Plan
-              </h3>
-
-              {/* Image Section */}
-              <div className="mb-6">
-                <img
-                  src={img}
-                  alt="Promotion"
-                  className="w-full h-48 object-cover rounded-md"
-                />
-              </div>
-
-              {/* Promotion Text Content */}
-              <div className="text-center">
-                <h4 className="text-xl font-semibold mb-2">{title}</h4>
-                <p className="text-lg font-semibold text-gray-700 mb-1">{price}</p>
-                <p className="text-sm text-gray-600">{description}</p>
-                <p className="text-sm text-gray-600 mt-2">{drop}</p>
-                <p className="text-sm text-gray-600">{validity}</p>
-                <p className="text-sm text-gray-600">{start}</p>
-              </div>
-
-              {/* Rating and Link */}
-              <div className="flex items-center justify-between mt-8">
-                <div className="flex text-orange-400 gap-x-2">
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarFill />
-                  <BsStarHalf />
-                </div>
-                <a
-                  className="font-medium text-blue-600 hover:underline"
-                  href="/services"
-                >
-                  Learn More
-                </a>
-              </div>
+    <>
+      <div className="page-wrap mb-5">
+        {/* Section to hold post sliders */}
+        <section className="post-sliders">
+          {/* Heading for the section */}
+          <h2 className="section-heading">Promotions</h2>
+          {/* Main post slider container */}
+          <div className="post-slider bg-gradient-to-r from-green to-white rounded-md ">
+            {/* Header card (title and sponsor information) */}
+            <div className="post-slider-header header-card bg-cover bg-no-repeat" style={{backgroundImage: `url(${image})`}}>
+              <h2 className="header-card-title bg-white text-green">Classic Tricks</h2>
+              <p className="header-card-sponsor bg-white text-green">Timeless CSS gems</p>
             </div>
-          );
-        })}
-      </div>
-    </div>
+            {/* Grid layout for mini cards (articles) */}
+            <div className="mini-card-grid ">
+              {/* First mini card */}
+              {/* bg-gradient-to-r from-green-300 to-green-300 */}
+              <article className="mini-card  bg-white">
+                <time>
+                  <strong>Article</strong> on Oct 6, 2021
+                </time>
+
+                <h3 className="mini-card-title">Advanced CSS Flexbox</h3>
+
+                {/* Short description of the article */}
+                <div className="mini-card-description text-green">
+                  Master flexbox with advanced techniques and layouts for
+                  responsive web design.
+                </div>
+
+                {/* Author information for the article */}
+                <div className="author-row">
+                  {/* Author avatar */}
+                  <div>
+                    <img
+                      alt=""
+                      src="https://avatar.iran.liara.run/public/14"
+                      className="avatar"
+                    />
+                  </div>
+                  {/* Link to author profile */}
+                  <a className="author-name " href="#" style={{color: "black"}}>
+                    Sam Winters
+                  </a>
+                </div>
+              </article>
+
+              {/* Second mini card */}
+              <article className="mini-card  bg-white">
+                <time>
+                  <strong>Article</strong> on Oct 6, 2021
+                </time>
+
+                <h3 className="mini-card-title">Advanced CSS Flexbox</h3>
+
+                {/* Short description of the article */}
+                <div className="mini-card-description text-green">
+                  Master flexbox with advanced techniques and layouts for
+                  responsive web design.
+                </div>
+
+                {/* Author information for the article */}
+                <div className="author-row">
+                  {/* Author avatar */}
+                  <div>
+                    <img
+                      alt=""
+                      src="https://avatar.iran.liara.run/public/14"
+                      className="avatar"
+                    />
+                  </div>
+                  {/* Link to author profile */}
+                  <a className="author-name " href="#" style={{color: "black"}}>
+                    Sam Winters
+                  </a>
+                </div>
+              </article>
+
+              {/* Third mini card */}
+              <article className="mini-card  bg-white">
+                <time>
+                  <strong>Article</strong> on Oct 6, 2021
+                </time>
+
+                <h3 className="mini-card-title">Advanced CSS Flexbox</h3>
+
+                {/* Short description of the article */}
+                <div className="mini-card-description text-green">
+                  Master flexbox with advanced techniques and layouts for
+                  responsive web design.
+                </div>
+
+                {/* Author information for the article */}
+                <div className="author-row">
+                  {/* Author avatar */}
+                  <div>
+                    <img
+                      alt=""
+                      src="https://avatar.iran.liara.run/public/14"
+                      className="avatar"
+                    />
+                  </div>
+                  {/* Link to author profile */}
+                  <a className="author-name " href="#" style={{color: "black"}}>
+                    Sam Winters
+                  </a>
+                </div>
+              </article>
+
+              {/* Fourth mini card */}
+              <article className="mini-card  bg-white">
+                <time>
+                  <strong>Article</strong> on Oct 6, 2021
+                </time>
+
+                <h3 className="mini-card-title">Advanced CSS Flexbox</h3>
+
+                {/* Short description of the article */}
+                <div className="mini-card-description text-green">
+                  Master flexbox with advanced techniques and layouts for
+                  responsive web design.
+                </div>
+
+                {/* Author information for the article */}
+                <div className="author-row">
+                  {/* Author avatar */}
+                  <div>
+                    <img
+                      alt=""
+                      src="https://avatar.iran.liara.run/public/14"
+                      className="avatar"
+                    />
+                  </div>
+                  {/* Link to author profile */}
+                  <a className="author-name " href="#" style={{color: "black"}}>
+                    Sam Winters
+                  </a>
+                </div>
+              </article>
+
+              {/* Fifth mini card */}
+              <article className="mini-card bg-white">
+                <time>
+                  <strong>Article</strong> on Jan 5, 2022
+                </time>
+
+                <h3 className="mini-card-title">
+                  Responsive Web Design Basics
+                </h3>
+
+                <div className="mini-card-description">
+                  An introduction to responsive design, with media queries and
+                  fluid layouts.
+                </div>
+
+                <div className="author-row">
+                  <div>
+                    <img
+                      alt=""
+                      src="https://avatar.iran.liara.run/public/18"
+                      className="avatar"
+                    />
+                  </div>
+                  <a className="author-name" href="#">
+                    Emily Rogers
+                  </a>
+                </div>
+              </article>
+
+              {/* Sixth mini card */}
+              <article className="mini-card bg-white">
+                <time>
+                  <strong>Article</strong> on Feb 22, 2022
+                </time>
+
+                <h3 className="mini-card-title">Advanced Selectors in CSS</h3>
+
+                <div className="mini-card-description">
+                  Discover powerful CSS selectors and how to use them in your
+                  stylesheets.
+                </div>
+
+                <div className="author-row">
+                  <div>
+                    <img
+                      alt=""
+                      src="https://avatar.iran.liara.run/public/14"
+                      className="avatar"
+                    />
+                  </div>
+                  <a className="author-name" href="#">
+                    James Foster
+                  </a>
+                </div>
+              </article>
+            </div>{" "}
+            {/* End of mini-card grid */}
+          </div>{" "}
+          {/* End of post-slider */}
+        </section>{" "}
+        {/* End of post-sliders section */}
+      </div>{" "}
+      {/* End of page-wrap */}
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import MainLayout from '../../Layouts/MainLayout';
-import Plans from './plans';
+import YogaPlans from './YogaPlans.jsx';
 import Promotion from './Promotion';
 
 const PlansandPackage = () => {
   return (
     <MainLayout>
-<Plans/>
+<YogaPlans/>
 <Promotion/>
     </MainLayout>
   )

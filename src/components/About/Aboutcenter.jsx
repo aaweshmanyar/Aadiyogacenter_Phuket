@@ -11,7 +11,7 @@ const Aboutcenter = () => {
     <div 
       data-aos="fade-up"
       className=" text-white text-shadow relative min-h-screen flex items-center justify-center py-10 px-5 md:px-20 bg-gradient-to-br from-green-50 via-white to-green-300 bg-no-repeat bg-cover bg-center z-0"
-      style={{ backgroundImage: `url(${painteffect})`, backgroundSize: 'contain', opacity: 0.8, textShadow: "1px 1.5px #000" }}
+      style={{ backgroundImage: `url(${painteffect})`, backgroundSize: 'contain', opacity: 0.8 }}
     >
       <div className="relative container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-10 z-10">
         {/* Text Section */}
@@ -28,7 +28,8 @@ const Aboutcenter = () => {
             Who We Are & What We Do
           </h1>
           <p className="text-md sm:text-lg leading-relaxed mb-6" style={{
-    color: window.innerWidth < 640 ? '#000' : 'white' , "textShadow": "1px 1.5px #fff"
+    color: window.innerWidth < 640 ? '#000' : 'white' ,
+    textShadow: window.innerWidth < 640 ? 'none' : '1px 1px 2px #000000'
   }}>
             At Aadi Yoga Center, we are dedicated to fostering holistic wellness
             and inner harmony. Through our diverse offerings including yoga
@@ -36,9 +37,13 @@ const Aboutcenter = () => {
             we empower individuals to cultivate a deeper connection with themselves
             and the world around them.
           </p>
-          <p className="text-md sm:text-lg text-gray-700 leading-relaxed mb-6" style={{
-    color: window.innerWidth < 640 ? '#000' : 'white' , "textShadow": "1px 1.5px #fff"
-  }}>
+          <p
+  className="text-md sm:text-lg text-gray-700 leading-relaxed mb-6"
+  style={{
+    color: window.innerWidth < 640 ? '#000' : 'white',
+    textShadow: window.innerWidth < 640 ? 'none' : '1px 1px 2px #000000'
+  }}
+>
             Our experienced instructors guide students of all levels on a journey
             of self-discovery, encouraging personal growth, physical vitality, and
             mental clarity. Join us as we embrace the transformative power of yoga

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import emailjs from "emailjs-com"; // Import EmailJS
 import "react-phone-input-2/lib/style.css"; // Import styles for react-phone-input-2
 
 const Contact = () => {
   const [emailMessage, setEmailMessage] = useState("");
   const [emailTextColor, setEmailTextColor] = useState("");
-  const form = useRef(null); // Reference to the form for EmailJS submission
-
+  const form = useRef(null); // Reference to the form for Google Sheets submission
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbyxOHCLGvXBPaAvxOF7DrKhVR76fkfR1zchlFvzAPLn3eWAey_AY5qZGLMP_RgkUH6XtQ/exec"; // Replace with your Google Apps Script URL
   const [formData, setFormData] = useState({
     user_firstname: "",
     user_lastname: "",
@@ -48,7 +48,7 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // Function to submit form data via EmailJS
+  // Function to submit form data to Google Sheets
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -62,24 +62,12 @@ const Contact = () => {
 
     console.log("Submitting Form Data:", formData); // Log the form data
 
-    const templateParams = {
-      user_firstname: formData.user_firstname,
-      user_lastname: formData.user_lastname,
-      user_email: formData.user_email,
-      user_phone: formData.user_phone,
-      user_message: formData.user_message,
-    };
-
-    emailjs
-      .send(
-        "service_6to78uv", // Replace with your EmailJS Service ID
-        "template_j4p45tc", // Replace with your EmailJS Template ID
-        templateParams,
-        "YpZ8BwMcnJpHK7rnX" // Replace with your EmailJS User ID
-      )
+    fetch(scriptURL, { method: "POST", body: new FormData(form.current) })
       .then((response) => {
         console.log("Success!", response);
-        setEmailMessage("Your form was successfully submitted!");
+        setEmailMessage(
+          "Your form was successfully submitted!"
+        );
         setEmailTextColor("green");
 
         setFormData({
@@ -117,16 +105,18 @@ const Contact = () => {
               Get in touch with us for any kind of help. We are here to give you
               the best and also help you to find your yoga course.
             </p>
+            {/* Adding Our Location, Opening Hours, Contact */}
             <div className="mt-8 space-y-4 text-lg">
+              {/* Our Location */}
               <div>
                 <h3 className="text-lg font-bold uppercase tracking-wider mb-2">
                   <span className="text-primary">&#x1F4CD;</span> Our Location
                 </h3>
                 <p className="text-gray-700">
-                  80, Doctor wattana, 16 Soi Dr. Watthana, Pa Tong, Phuket,
-                  83150, Thailand
+                80, Doctor wattana, 16 Soi Dr. Watthana, Pa Tong, Phuket, 83150, Thailand
                 </p>
               </div>
+              {/* Opening Hours */}
               <div>
                 <h3 className="text-lg font-bold uppercase tracking-wider mb-2">
                   <span className="text-primary">&#x23F0;</span> Opening Hours
@@ -136,14 +126,15 @@ const Contact = () => {
                   05:30 AM to 09:00 PM
                 </p>
               </div>
+              {/* Contact */}
               <div>
                 <h3 className="text-lg font-bold uppercase tracking-wider mb-2">
                   <span className="text-primary">&#x1F4E9;</span> Contact
                 </h3>
                 <p className="text-gray-700 mb-5">
-                  Phone: +66 80 251 1273 
+                  Phone: +66 80 251 1273
                   <br />
-                  Email: info@aadiyogacenterphuket.com
+                  Email: info@aadiyogacenter.com
                 </p>
               </div>
             </div>
@@ -187,6 +178,7 @@ const Contact = () => {
             {errors.user_email && (
               <p className="text-red-500 text-sm">{errors.user_email}</p>
             )}
+            {/* Phone input converted to a normal input field */}
             <input
               className={`form-control ${
                 errors.user_phone ? "border-red-500" : ""
@@ -194,7 +186,7 @@ const Contact = () => {
               placeholder="Phone number"
               required
               name="user_phone"
-              type="text"
+              type="text" // Change type to text
               value={formData.user_phone}
               onChange={handleChange}
             />
@@ -211,7 +203,8 @@ const Contact = () => {
             <button className="btn btn-lg btn-orange" type="submit">
               Send Message
             </button>
-            <p style={{ color: emailTextColor }}>{emailMessage}</p>
+            <p style={{ color: emailTextColor }}>{emailMessage}</p>{" "}
+            {/* Feedback Message */}
           </form>
         </div>
       </div>
@@ -220,3 +213,7 @@ const Contact = () => {
 };
 
 export default Contact;
+"service_6to78uv", // Replace with your EmailJS Service ID
+        "template_j4p45tc", // Replace with your EmailJS Template ID
+        form.current,
+        "YpZ8BwMcnJpHK7rnX"

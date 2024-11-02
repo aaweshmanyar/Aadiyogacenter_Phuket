@@ -21,14 +21,13 @@ const Footer = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-teal-900 text-white bg-green-300 py-10">
+      <footer className="bg-gradient-to-br from-green-200 via-green-300 py-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Footer Brand Section */}
             <div>
               <div className="flex items-center mb-4">
-                {/* Replace with your logo */}
-                <img src={Logo} alt="Logo" className="w-12 h-12 mr-3" />
+                <img src={Logo} alt="Logo" className="w-12 h-12 mr-3 shadow-sm shadow-white rounded-md" />
                 <span className="text-lg font-bold text-white">
                   Aadi Yoga Center Phuket
                 </span>
@@ -40,61 +39,64 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Services Section */}
+            {/* Services and Policies Section */}
             <div>
               <h3 className="text-lg font-semibold mb-3 text-white">
                 Services
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <a
-                    href="/yogaclass"
-                    className="hover:text-gray-400 text-gray-200"
-                  >
+                  <a href="/yogaclass" className="hover:text-heading text-gray-400">
                     Yoga Classes (Private & Group)
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/yogatherapy"
-                    className="hover:text-gray-400 text-gray-200"
-                  >
+                  <a href="/yogatherapy" className="hover:text-heading text-gray-200">
                     Yoga Therapy
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/kidsyoga"
-                    className="hover:text-gray-400 text-gray-200"
-                  >
+                  <a href="/kidsyoga" className="hover:text-heading text-gray-200">
                     Kids Yoga
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/yogatherapy"
-                    className="hover:text-gray-400 text-gray-200"
-                  >
+                  <a href="/yogateacher" className="hover:text-heading text-gray-200">
                     Yoga Teacher
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/trainingcourse"
-                    className="hover:text-gray-400 text-gray-200"
-                  >
+                  <a href="/trainingcourse" className="hover:text-heading text-gray-200">
                     Training Courses
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/soundhealing"
-                    className="hover:text-gray-400 text-gray-200"
-                  >
+                  <a href="/soundhealing" className="hover:text-heading text-gray-200">
                     Sound Healing
                   </a>
                 </li>
               </ul>
+              {/* Additional Policies Section */}
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold mb-3 text-white">Policies</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/termsconditions" className="hover:text-heading text-gray-200">
+                      Terms & Conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/privacypolicy" className="hover:text-heading text-gray-200">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/refundpolicy" className="hover:text-heading text-gray-200">
+                      Refund Policy
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             {/* Contact Section */}
@@ -110,7 +112,7 @@ const Footer = () => {
                 Phone: +66 963 340 218
               </p>
               <p className="text-sm text-gray-200">
-                Email: info@aadiyogacenter.com
+                Email: info@aadiyogacenterphuket.com
               </p>
             </div>
           </div>

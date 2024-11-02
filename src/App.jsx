@@ -3,17 +3,17 @@ import "aos/dist/aos.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./components/context/AuthContext";
-import ProtectedRoute from './components/protectedroute/ProtectedRoute'
+import ProtectedRoute from "./components/protectedroute/ProtectedRoute";
 import Home from "./Pages/Home";
 import AboutUs from "./components/About/About";
 import Gallery from "./components/Gallery/Gallery";
 import Branch from "./components/Branch/Branch";
-import ScrollTop from './components/ScrollTop/ScrollTop'
+import ScrollTop from "./components/ScrollTop/ScrollTop";
 import Schedule from "./Pages/Schedule";
 import YogaClasses from "./Pages/Yogaclass";
 import Normalcls from "./Pages/Normalcls";
 // import Privatecls from "./Pages/Privatecls";
-import Pilates from './components/Services/Pilates';
+import Pilates from "./components/Services/Pilates";
 import Kidsyoga from "./components/Services/Kidsyoga";
 import YogaTherapy from "./components/Services/YogaTherapy";
 import Soundhealing from "./components/Services/Soundhealing";
@@ -24,6 +24,9 @@ import Product from "./components/Product/Product";
 import AuthForm from "./Pages/signup_signinform/AuthForm";
 import SigninForm from "./Pages/signup_signinform/SignInform";
 import PlansandPackage from "./components/plans & promotion/PlansandPackage";
+import TermsConditions from "./components/Policies/TermsConditions.jsx";
+import RefundPolicy from "./components/Policies/RefundPolicy.jsx";
+import PrivacyPolicy from "./components/Policies/PrivacyPolicy.jsx";
 
 const App = () => {
   Aos.init({
@@ -54,16 +57,13 @@ const App = () => {
           <Route path="/branch" element={<Branch />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/packageplans" element={<PlansandPackage />} />
+          <Route path="/termsconditions" element={<TermsConditions />} />
+          <Route path="/refundpolicy" element={<RefundPolicy />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           {/* Conditionally render Normalcls route based on authentication */}
           {/* <Route path="/normalclass" element={<ProtectedRoute element={<Normalcls />} />} /> */}
-          <Route 
-            path="/normalclass" 
-            element={
-              <ProtectedRoute>
-                <Normalcls />
-              </ProtectedRoute>
-            } 
-          />
+          <Route path="/normalclass" element={<Normalcls />} />
+          {/* <ProtectedRoute></ProtectedRoute> */}
         </Routes>
       </Router>
     </AuthProvider>

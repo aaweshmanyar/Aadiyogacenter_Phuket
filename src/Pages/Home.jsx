@@ -12,6 +12,8 @@ import About from '../components/Aboutyogacenter/Yogacenter';
 import Reveiw from '../components/Reveiw/Reveiw';
 import OurClasses from '../components/Classes/OurClasses.jsx';
 import Aboutcenter from '../components/About/Aboutcenter.jsx';
+import WhatsAppButton from '../components/Whatsapp/WhatsAppButton.jsx';
+import ChatBot from '../components/Chatbot/Chatbot.jsx';
 
 
 
@@ -22,12 +24,13 @@ const Home = () => {
     <MainLayout>
     <Hero />
        {/* <Cards /> */}
+       <WhatsAppButton/>
+       <ChatBot/>
        <Aboutcenter/>
        <Facts />
        <OurClasses/>
        <Ourinstructor />
        <Reveiw/>
-  
        <Newsletter />
        <Contact />
     </MainLayout>

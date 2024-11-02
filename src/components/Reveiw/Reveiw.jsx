@@ -25,7 +25,7 @@ const Review = () => {
         <h2 className="text-3xl font-extrabold mb-6">
           Testimonial
         </h2>
-        <p className="text-lg mb-10 text-white">
+        <p className="text-lg mb-10 text-heading">
           Discover what people are saying about Aadi Yoga Center, their
           experiences, and how we helped them on their journey to wellness.
         </p>
@@ -33,12 +33,12 @@ const Review = () => {
         {/* Google Review Widget */}
         <div
           className="w-full rounded-xl shadow-lg border border-white bg-opacity-70"
-          data-romw-token="ugNoBL9ptNbanfWS5tewpucLdZaJ3wGHrapiBCyzbEiln3NOKE"
+          class="elfsight-app-3c3ee2f6-4949-4acd-aeaf-d336506da888" data-elfsight-app-lazy
         ></div>
 
         {/* Testimonial Footer */}
         <div className="mt-6 text-sm">
-          <p className="text-white">We value every customer’s feedback and strive to provide the best experience possible!</p>
+          <p className="text-heading">We value every customer’s feedback and strive to provide the best experience possible!</p>
         </div>
       </div>
     </div>
