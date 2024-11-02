@@ -16,6 +16,12 @@ jobs:
       - name: Install all dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Update Browserslist DB
+        run: npx update-browserslist-db@latest
+
+      - name: Verify Pilates Image Exists
+        run: test -f src/assets/img/Pilates/pilatesnew.jpg || echo "File not found: src/assets/img/Pilates/pilatesnew.jpg"
+
       - name: Build
         run: npm run build # The build command of your project
 
