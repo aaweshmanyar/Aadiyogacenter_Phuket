@@ -1,4 +1,4 @@
-name: Generate a build and push to another branch
+name: Deploy React App to Hostinger
 
 on:
   push:
@@ -6,30 +6,32 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    name: Build and Push
+
     steps:
-      - name: git-checkout
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: Install all dependencies
-        run: npm install --legacy-peer-deps
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-      - name: Update Browserslist DB
-        run: npx update-browserslist-db@latest
+      - name: Install dependencies
+        run: npm install
 
-      - name: Verify Pilates Image Exists
-        run: test -f src/assets/img/Pilates/pilatesnew.jpg || echo "File not found: src/assets/img/Pilates/pilatesnew.jpg"
+      - name: Build React App
+        run: npm run build
 
-      - name: Build
-        run: npm run build # The build command of your project
-
-      - name: Push
-        uses: s0/git-publish-subdir-action@develop
+      - name: Deploy to Hostinger via FTP
         env:
-          REPO: self
-          BRANCH: build # The branch name where you want to push the assets
-          FOLDER: build # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          apt-get install -y lftp
+          lftp -c "
+            open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST;
+            mirror -R ./build /public_html;
+          "
