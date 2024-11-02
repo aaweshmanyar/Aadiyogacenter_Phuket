@@ -24,7 +24,7 @@ const OurClasses = () => {
     },
     {
       id: 3,
-      title: "Kids Yoga",
+      title: "Kids Yoga" ,
       description:
         "Mindful Moves for Little Ones: Discover the Joy of Kids Yoga!. ",
       image: image3,
