@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import image1 from "./pilatesnew.jpg";
-import image2 from "../../assets/img/Sound Healing/soundhealing1.jpg";
-import image3 from "../../assets/img/kidsyoga/kidsyoga1.jpg";
-import image4 from "../../assets/img/Aboutyogacenter/image-13.jpg";
+import image1 from "./classesimg/pilatesnew.jpg";
+import image2 from "./classesimg/soundhealing1.jpg";
+import image3 from "./classesimg/kidsyoga1.jpg";
+import image4 from "./classesimg/image-13.jpg";
 
 const OurClasses = () => {
   const navigate = useNavigate();

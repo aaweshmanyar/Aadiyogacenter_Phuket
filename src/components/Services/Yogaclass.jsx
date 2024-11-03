@@ -3,13 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from '../Contact/Contact';
-import img1 from '../../assets/img/Yogaclass/yogacls1.png';
-import img2 from '../../assets/img/Yogaclass/yogacls2.png';
-import img3 from '../../assets/img/Yogaclass/yogacls3.png';
-import img4 from '../../assets/img/Yogaclass/yogacls4.jpg';
-import img5 from '../../assets/img/Yogaclass/yogacls5.png';
-import img6 from '../../assets/img/Yogaclass/yogacls6.png';
-import img7 from '../../assets/img/Yogaclass/yogacls7.jpg';
+import img1 from './Yogaclass/yogacls1.png';
+import img2 from './Yogaclass/yogacls2.png';
+import img3 from './Yogaclass/yogacls3.png';
+import img4 from './Yogaclass/yogacls4.jpg';
+import img5 from './Yogaclass/yogacls5.png';
+import img6 from './Yogaclass/yogacls6.png';
+import img7 from './Yogaclass/yogacls7.jpg';
 
 const yogaImages = [
   img1,

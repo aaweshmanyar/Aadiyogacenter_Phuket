@@ -1,9 +1,9 @@
 import React from "react";
 import MainLayout from "../../Layouts/MainLayout";
 import Contact from "../Contact/Contact";
-import image1 from "../../assets/img/Product/product1.jpeg";
-import image2 from "../../assets/img/Product/product2.jpeg";
-import image3 from "../../assets/img/Product/product3.jpeg";
+import image1 from "./Productimg/product1.jpeg";
+import image2 from "./Productimg/product2.jpeg";
+import image3 from "./Productimg/product3.jpeg";
 
 const Product = () => {
   return (

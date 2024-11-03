@@ -1,5 +1,5 @@
 // import HeroImage from "../../assets/img/hero/yogalady.png";
-import HeroImage from "../../assets/img/hero/herosectionbg2.jpg";
+import HeroImage from "./heroimg/herosectionbg2.jpg";
 
 
 

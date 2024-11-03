@@ -1,6 +1,6 @@
-import CardImage1 from "../../assets/img/cards/card-1.jpeg";
-import CardImage2 from "../../assets/img/cards/card-2.jpg";
-import CardImage3 from "../../assets/img/cards/card-4.jpg";
+import CardImage1 from "./cardsimg/card-1.jpeg";
+import CardImage2 from "./cardsimg/card-2.jpg";
+import CardImage3 from "./cardsimg/card-4.jpg";
 
 
 export const cards = {

@@ -3,13 +3,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useNavigate } from 'react-router-dom';
-import image from '../../assets/img/service-img/serv-img2.png';
-import yogacls1 from '../../assets/img/Yogaclass/yogacls1.jpg';
-import yogacls2 from '../../assets/img/Yogaclass/yogacls2.jpg';
-import yogacls3 from '../../assets/img/Yogaclass/yogacls3.jpg';
-import yogacls4 from '../../assets/img/Yogaclass/yogacls4.jpg';
-import yogacls5 from '../../assets/img/Yogaclass/yogacls7.jpg';
-import yogacls6 from '../../assets/img/Yogaclass/yogacls8.jpg';
+import image from './classesimg/serv-img2.png';
+import yogacls1 from './classesimg/yogacls1.jpg';
+import yogacls2 from './classesimg/yogacls2.jpg';
+import yogacls3 from './classesimg/yogacls3.jpg';
+import yogacls4 from './classesimg/yogacls4.jpg';
+import yogacls5 from './classesimg/yogacls7.jpg';
+import yogacls6 from './classesimg/yogacls8.jpg';
 
 const Schedule = () => {
   const scheduleData = [

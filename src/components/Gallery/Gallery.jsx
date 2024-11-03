@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import MainLayout from "../../Layouts/MainLayout";
 import Contact from "../Contact/Contact";
-import img1 from '../../assets/img/Gallery/gallery1.png';
-import img2 from '../../assets/img/Gallery/gallery2.png';
-import img3 from '../../assets/img/Gallery/gallery3.png';
-import img4 from '../../assets/img/Gallery/gallery4.png';
-import img5 from '../../assets/img/Gallery/gallery5.png';
-import img6 from '../../assets/img/Gallery/gallery6.png';
-import yogaclass1 from '../../assets/img/courses/kidsyoga.jpg';
-import yogaclass2 from '../../assets/img/courses/soundhealing.png';
-import yogaclass3 from '../../assets/img/courses/Therapeutic.jpg';
-import yogaclass4 from '../../assets/img/courses/yogaclass.png';
-import yogaclass5 from '../../assets/img/courses/yogateacher.png';
-import yogaclass6 from '../../assets/img/courses/pillates.jpg';
+import img1 from './Galleryimg/gallery1.png';
+import img2 from './Galleryimg/gallery2.png';
+import img3 from './Galleryimg/gallery3.png';
+import img4 from './Galleryimg/gallery4.png';
+import img5 from './Galleryimg/gallery5.png';
+import img6 from './Galleryimg/gallery6.png';
+import yogaclass1 from './Galleryimg/kidsyoga.jpg';
+import yogaclass2 from './Galleryimg/pillates.jpg';
+import yogaclass3 from './Galleryimg/Therapeutic.jpg';
+import yogaclass4 from './Galleryimg/yogaclass.jpg';
+import yogaclass5 from './Galleryimg/yogateacher.png';
+import yogaclass6 from './Galleryimg/pillates.jpg';
 
 
 const Gallery = () => {

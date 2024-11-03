@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import MainLayout from "../../Layouts/MainLayout";
 import Contact from "../Contact/Contact";
 import Review from "../Reveiw/Reveiw";
-import aboutimg from '../../assets/img/About/about.png';
+import aboutimg from './Aboutimg/about.png';
 
 const About = () => {
   return (

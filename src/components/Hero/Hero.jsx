@@ -1,10 +1,12 @@
 import React from "react";
 import { heroData } from "./Herodata"; // Adjust path if necessary
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const handleBookNow = () => {
-    // Implement the logic for Book Now button
-    console.log("Book Now clicked!");
+  const navigate = useNavigate();
+
+  const navigatetab = () => {
+    navigate('/normalclass');
   };
 
   return (
@@ -42,7 +44,7 @@ const HeroSection = () => {
               {/* Button styled similarly to the reference */}
               <div className="flex justify-center lg:justify-start">
                 <button
-                  onClick={handleBookNow}
+                  onClick={navigatetab}
                   className="py-2 px-5 text-lg bg-green-300 hover:bg-green-200 text-white rounded-md transition-all duration-300 ease-in-out shadow-lg"
                 >
                   {heroData.btn1}

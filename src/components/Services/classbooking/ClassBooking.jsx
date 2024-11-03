@@ -6,7 +6,7 @@ import "firebase/compat/firestore";
 import "firebase/compat/storage";
 import firebaseConfig from "../../../Pages/firebase/firebaseConfig";
 import "./Class.css";
-import Qrcode from "../../../assets/img/qrcode/QRCode.png";
+import Qrcode from "./qrcode/QRCode.png";
 
 // Initialize Firebase
 if (!firebase.apps.length) {

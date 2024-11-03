@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "../Contact/Contact";
 import MainLayout from "../../Layouts/MainLayout";
-import img1 from "../../assets/img/Yoga Therapy/yogath1.jpg";
-import img2 from "../../assets/img/Yoga Therapy/yogath2.jpg";
-import img3 from "../../assets/img/Yoga Therapy/yogath3.jpg";
-import img4 from "../../assets/img/Yoga Therapy/yogath4.jpg";
-import img5 from "../../assets/img/Yoga Therapy/yogath5.jpg";
-import img6 from "../../assets/img/Yoga Therapy/yogath6.jpg";
+import img1 from "./Yoga Therapy/yogath1.jpg";
+import img2 from "./Yoga Therapy/yogath2.jpg";
+import img3 from "./Yoga Therapy/yogath3.jpg";
+import img4 from "./Yoga Therapy/yogath4.jpg";
+import img5 from "./Yoga Therapy/yogath5.jpg";
+import img6 from "./Yoga Therapy/yogath6.jpg";
 
 // Example Yoga Images - Replace with your actual image URLs or import them.
 const yogaImages = [img1, img2, img3, img4, img5, img6];

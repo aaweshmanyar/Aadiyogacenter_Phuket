@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "../Contact/Contact";
 import MainLayout from "../../Layouts/MainLayout";
-import img1 from "../../assets/img/Sound Healing/soundhealing1.jpg";
-import img2 from "../../assets/img/Sound Healing/soundhealing6.jpg";
-import img3 from "../../assets/img/Sound Healing/soundhealing3.jpg";
-import img4 from "../../assets/img/Sound Healing/soundhealing4.jpg";
-import img5 from "../../assets/img/Sound Healing/soundhealing5.jpg";
+import img1 from "./Sound Healing/soundhealing1.jpg";
+import img2 from "./Sound Healing/soundhealing6.jpg";
+import img3 from "./Sound Healing/soundhealing3.jpg";
+import img4 from "./Sound Healing/soundhealing4.jpg";
+import img5 from "./Sound Healing/soundhealing5.jpg";
 // import img6 from "../../assets/img/Sound Healing/soundhealing6.jpg";
 
 // Example Yoga Images - Replace with your actual image URLs or import them.

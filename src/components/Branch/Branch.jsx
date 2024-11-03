@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from "../../Layouts/MainLayout";
 import Contact from "../Contact/Contact";
-import image from '../../assets/img/service-img/serv-img2.png';
+import image from './branch.png';
 
 const Branch = () => {
   return (

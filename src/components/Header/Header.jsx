@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons"; // Import user icon
 import Nav from "../Navbar/Nav";
 import NavMobile from "../Navbar/NavMobile";
-import Logo from "../../assets/img/logo.png";
+import Logo from "./logo.png";
 
 const Header = () => {
   const [isHeader, setIsHeader] = useState(false);

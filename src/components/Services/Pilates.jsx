@@ -4,13 +4,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "../Contact/Contact";
 import MainLayout from "../../Layouts/MainLayout";
-import img1 from '../../assets/img/Pilates/pilates.jpg';
-import img2 from '../../assets/img/Pilates/pilates2.jpg';
-import img3 from '../../assets/img/Pilates/pilates3.jpg';
-import img4 from '../../assets/img/Pilates/pilates4.jpg';
-import img5 from '../../assets/img/Pilates/pilates5.jpg';
-import img6 from '../../assets/img/Pilates/pilates6.jpg';
-import img7 from '../../assets/img/Pilates/pilates7.jpg';
+import img1 from './Pilates/pilates.jpg';
+import img2 from './Pilates/pilates2.jpg';
+import img3 from './Pilates/pilates3.jpg';
+import img4 from './Pilates/pilates4.jpg';
+import img5 from './Pilates/pilates5.jpg';
+import img6 from './Pilates/pilates6.jpg';
+import img7 from './Pilates/pilates7.jpg';
 
 // Example Yoga Images - Replace with your actual image URLs or import them.
 const yogaImages = [

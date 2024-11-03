@@ -1,9 +1,9 @@
-import kidsyoga from "../../assets/img/service-img/kidsyoga.jpg";
-import pillates from "../../assets/img/courses/pillates.jpg";
-import yogateacher from "../../assets/img/courses/yogateacher.png";
-import soundhealing from "../../assets/img/courses/soundhealing.jpg";
-import Therapeutic from "../../assets/img/courses/Therapeutic.jpg";
-import yogaclass from "../../assets/img/courses/yogaclass.jpg";
+import kidsyoga from "./coursesimg/kidsyoga.jpg";
+import pillates from "./coursesimg/pillates.jpg";
+import yogateacher from "./coursesimg/yogateacher.png";
+import soundhealing from "./coursesimg/soundhealing.jpg";
+import Therapeutic from "./coursesimg/Therapeutic.jpg";
+import yogaclass from "./coursesimg/yogaclass.jpg";
 
 
 

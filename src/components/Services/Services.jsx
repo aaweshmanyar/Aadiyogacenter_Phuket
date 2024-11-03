@@ -5,12 +5,12 @@ import MainLayout from "../../Layouts/MainLayout";
 import { courses } from "../Courses/Coursesdata";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import Contact from '../Contact/Contact';
-import img1 from '../../assets/img/service-img/serv-img1.png';
-import img2 from '../../assets/img/service-img/serv-img2.png';
-import img3 from '../../assets/img/service-img/kidsyoga.jpg';
-import img4 from '../../assets/img/service-img/serv-img4.png';
-import img5 from '../../assets/img/service-img/serv-img5.png';
-import img6 from '../../assets/img/service-img/serv-img6.png';
+import img1 from './service-img/serv-img1.png';
+import img2 from './service-img/serv-img2.png';
+import img3 from './service-img/kidsyoga.jpg';
+import img4 from './service-img/serv-img4.png';
+import img5 from './service-img/serv-img5.png';
+import img6 from './service-img/serv-img6.png';
 
 const Services = () => {
   const navigate = useNavigate(); // Initialize the useNavigate hook

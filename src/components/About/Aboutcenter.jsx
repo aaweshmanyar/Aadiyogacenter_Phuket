@@ -1,6 +1,6 @@
 import React from 'react';
-import aboutimg from '../../assets/img/About/Aboutus.jpg';
-import painteffect from '../../assets/img/About/effectimgnew.png'; // Check the path
+import aboutimg from './Aboutimg/Aboutus.jpg';
+import painteffect from './Aboutimg/effectimgnew.png'; // Check the path
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { cards } from "./Carddata";
-import Cardimage2 from '../../assets/img/cards/card-2.jpg'
+import Cardimage2 from './cardsimg/card-2.jpg'
 const Cards = () => {
   return (
     <section

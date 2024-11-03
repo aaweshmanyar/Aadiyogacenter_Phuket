@@ -1,8 +1,8 @@
 import React from "react";
-import img from "../../assets/img/Pilates/pilates2.jpg";
+import img from "./PPImage/pilates2.jpg";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import './promotion.css';
-import image from '../../assets/img/courses/yogaclass.jpg';
+import image from './PPImage/yogaclass.jpg';
 
 const Promotions = () => {
   

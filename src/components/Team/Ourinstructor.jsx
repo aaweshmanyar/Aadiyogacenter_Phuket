@@ -1,9 +1,16 @@
 import React from "react";
 import Deepakimg from './deepaksir.jpg';
 import Aadiimg from './aadi.jpg';
-import painteffect from '../../assets/img/About/effectimgnew.png';
+import painteffect from './effectimgnew.png';
+import { useNavigate } from "react-router-dom";
 
 const OurInstructor = () => {
+  const navigate = useNavigate();
+
+  const navigatetab = () => {
+    navigate('/about');
+  };
+  
   return (
     <div className="bg-blue-100 py-16 lg:py-20 bg-no-repeat bg-cover bg-center z-0" style={{ backgroundImage: `url(${painteffect})`, backgroundSize: 'contain', opacity: 0.8}}>
       <div className="container mx-auto px-6">
@@ -17,7 +24,7 @@ const OurInstructor = () => {
   }}>
               Meet our welcoming instructors who are here to provide you with all various practices for your best benefit and great experience in the class.
             </p>
-            <button className="px-6 py-3 bg-gradient-to-r from-green-200 to-green-300 text-white text-lg font-semibold rounded-lg hover:bg-pink-500 transition duration-300 shadow-md">
+            <button onClick={navigatetab} className="px-6 py-3 bg-gradient-to-r from-green-200 to-green-300 text-white text-lg font-semibold rounded-lg hover:bg-pink-500 transition duration-300 shadow-md">
               LEARN MORE
             </button>
           </div>

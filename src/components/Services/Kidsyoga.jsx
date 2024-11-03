@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "../Contact/Contact";
 import MainLayout from "../../Layouts/MainLayout";
-import img1 from "../../assets/img/kidsyoga/kidsyoga1.jpg";
-import img2 from "../../assets/img/kidsyoga/kidsyoga2.jpg";
-import img3 from "../../assets/img/kidsyoga/kidsyoga3.jpg";
-import img4 from "../../assets/img/kidsyoga/kidsyoga4.jpg";
+import img1 from "./kidsyoga/kidsyoga1.jpg";
+import img2 from "./kidsyoga/kidsyoga2.jpg";
+import img3 from "./kidsyoga/kidsyoga3.jpg";
+import img4 from "./kidsyoga/kidsyoga4.jpg";
 // import img5 from '../../assets/img/Yogaclass/yogacls5.png';
 // import img6 from '../../assets/img/Yogaclass/yogacls6.png';
 
