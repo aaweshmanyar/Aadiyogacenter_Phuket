@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import image1 from "../../assets/img/Pilates/pilatesnew.jpg";
+import image1 from "./pilatesnew.jpg";
 import image2 from "../../assets/img/Sound Healing/soundhealing1.jpg";
 import image3 from "../../assets/img/kidsyoga/kidsyoga1.jpg";
 import image4 from "../../assets/img/Aboutyogacenter/image-13.jpg";
