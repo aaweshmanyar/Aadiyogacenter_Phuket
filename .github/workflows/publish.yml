@@ -39,6 +39,6 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           port: ${{ secrets.HOSTINGER_FTP_PORT }}
           protocol: ftp
-          local-dir: build/
-          server-dir: public_html/  # Use public_html as the server directory
+          local-dir: ./public_html/
+          server-dir: /home/u665072172/domains/aadiyogacenterphuket.com/public_html/  # Full path to public_html with trailing slash
           dry-run: false
