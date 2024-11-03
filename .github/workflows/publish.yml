@@ -1,37 +1,43 @@
-name: Deployment React App to Hostinger
+name: Deploy React App to Hostinger
 
+# Trigger the workflow on push to main branch
 on:
   push:
     branches:
       - master
 
+# Job configuration
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      # Checkout the latest code
+      - name: Checkout code
         uses: actions/checkout@v2
 
+      # Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
 
+      # Install dependencies and build the React app
       - name: Install dependencies
         run: npm install
 
-      - name: Build React App
+      - name: Build the React app
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          apt-get install -y lftp
-          lftp -c "
-            open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST;
-            mirror -R ./build /public_html;
-          "
+      # Deploy the build folder to Hostinger via FTP
+      - name: Deploy to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_FTP_PORT }}
+          local-dir: build
+          server-dir: ${{ secrets.HOSTINGER_FTP_PATH }}
+          method: ftp
+          dry-run: false  # Set to true for testing without actual upload
