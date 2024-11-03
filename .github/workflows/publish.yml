@@ -1,6 +1,6 @@
 name: Deploy React App to Hostinger
 
-# Trigger the workflow on push to main branch
+# Trigger the workflow on push to master branch
 on:
   push:
     branches:
@@ -22,10 +22,15 @@ jobs:
         with:
           node-version: '16'
 
-      # Install dependencies and build the React app
-      - name: Install dependencies
-        run: npm install
+      # Clear npm cache to avoid potential conflicts
+      - name: Clear npm cache
+        run: npm cache clean --force
 
+      # Install dependencies with --legacy-peer-deps to bypass dependency conflicts
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      # Build the React app
       - name: Build the React app
         run: npm run build
 
